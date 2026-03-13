@@ -1,0 +1,5 @@
+{
+  "name": "Générateur de Rapport Académique",
+  "description": "Une application pour générer des rapports académiques structurés en utilisant l'API Gemini, basée sur des instructions détaillées. L'application génère le rapport et permet de le télécharger au format .doc.",
+  "requestFramePermissions": []
+}
