@@ -171,8 +171,10 @@ with col1:
 with col2:
     st.subheader("Résultat")
     if 'report' in st.session_state:
-        with st.container(height=500):
-            st.markdown(st.session_state['report'])
+        # Affichage direct pour éviter les erreurs React (removeChild) liées aux conteneurs défilants
+        st.markdown(st.session_state['report'], unsafe_allow_html=True)
+        
+        st.write("---")
         
         # Bouton de téléchargement
         doc_bytes = create_doc_html(st.session_state['report'])
